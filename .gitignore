@@ -16,3 +16,7 @@ BLACS/TESTING/xCbtest
 BLACS/TESTING/xFbtest
 SLmake.inc
 
+
+# Desloppify artifacts
+.desloppify/
+scorecard.png
