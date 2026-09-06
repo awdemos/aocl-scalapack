@@ -1,5 +1,6 @@
-#AOCL-ScaLAPACK:
-----------------
+# AOCL-ScaLAPACK
+
+---
 AOCL-ScaLAPACK is a library of high-performance linear algebra routines for parallel distributed memory machines.
 It can be used to solve linear systems, least squares problems, eigenvalue problems, and singular value problems.
 
@@ -7,16 +8,16 @@ AOCL-ScaLAPACK is forked from upstream Netlib ScaLAPACK GitHub [repository](http
 This fork has ScaLAPACK optimized for AMD “Zen” core-based processors. It depends on external libraries BLAS and LAPACK.
 For AMD CPUs, use of AOCL-BLIS, AOCL-libFLAME and AOCL-Utils is recommended.
 
-#Installation:
+# Installation:
 --------------
 1. Download the latest stable release from the Github repository GitHub URL: https://github.com/amd/aocl-scalapack
 2. Install CMake on the machine where the sources are to be compiled.
 3. Use the CMake based build system to compile and generate AOCL-ScaLAPACK library and test suite binary as 
    explained below for Linux® and Windows® platforms.
 
-#Building AOCL-ScaLAPACK from Source on Linux
+# Building AOCL-ScaLAPACK from Source on Linux
 ---------------------------------------------
-#Prerequisites:
+# Prerequisites:
 ---------------
 Following are the prerequisite libraries for building AOCL-ScaLAPACK:
 - AOCL-BLAS
@@ -24,7 +25,7 @@ Following are the prerequisite libraries for building AOCL-ScaLAPACK:
 - AOCL-Utils
 - An MPI library (validated with OpenMPI library)
 
-#Build Instruction:
+# Build Instruction:
 -------------------
 1. Execute the command:
    $ cd aocl-scalapack
@@ -99,9 +100,9 @@ Following are the prerequisite libraries for building AOCL-ScaLAPACK:
       #Note: On Linux, the inbuilt communications sub-module of AOCL-ScaLAPACK, called Basic Linear Algebra Communication Subprogram (BLACS), 
              exposes the API symbols in lower case with underscore format.
 
-#Building AOCL-ScaLAPACK from Source on Windows
+# Building AOCL-ScaLAPACK from Source on Windows
 -----------------------------------------------
-#Prerequisites:
+# Prerequisites:
 ---------------
 Following are the prerequisite libraries for building AOCL-ScaLAPACK:
 - AOCL-BLAS, AOCL-LAPACK and AOCL-Utils libraries
@@ -116,7 +117,7 @@ Following are the prerequisite libraries for building AOCL-ScaLAPACK:
   - Python development
   - Desktop development with C++: C++ Clang-Cl for v142 build tool (x64 or x86)
 
-#Build Instruction
+# Build Instruction
 ------------------
 1. Preparing and Building Project with CMake GUI:
    
@@ -155,7 +156,7 @@ Following are the prerequisite libraries for building AOCL-ScaLAPACK:
       #Note: On Windows, the inbuilt communications submodule of ScaLAPACK, called Basic Linear Algebra Communication Subprograms(BLACS), 
              exposes the API symbols in upper case without underscore format.
 
-#Additional Library Build Options
+# Additional Library Build Options
 ---------------------------------
 Use the following additional options to configure your build:
 
@@ -181,7 +182,7 @@ SCALAPACK_BUILD_TESTS               |  This flag specifies whether to compile an
 SCALAPACK_LIBRARY_PATH              |  This flag specifies the path to the ScaLAPACK library when -DSCALAPACK_BUILD_SOURCE=OFF 
                                        -DSCALAPACK_LIBRARY_PATH="/home/amd/shared" (this is an example, path can be anything)
 
-#Enabling DTL at run-time
+# Enabling DTL at run-time
 # To enables the log file, trace file and progress feature at run time in Linux use below command:
 - export AOCL_SL_LOG=1 
 - export AOCL_SL_TRACE=1
@@ -192,27 +193,27 @@ SCALAPACK_LIBRARY_PATH              |  This flag specifies the path to the ScaLA
 - set AOCL_SL_TRACE=1
 - set AOCL_SL_PROGRESS=1
 
-#Running Test Application On Linux:
+# Running Test Application On Linux:
 -----------------------------------
 The test application binaries are generated in the <aocl-scalapack>/build/TESTING folder.
 You can find the applications demonstrating the usage of ScaLAPACK APIs in the TESTING
 directory of ScaLAPACK source package
 
-#Example:
+# Example:
 $ cd aocl-scalapack/TESTING
 $ mpirun -np 4 ./xdlu
 
-#Running Test Application On Windows:
+# Running Test Application On Windows:
 -------------------------------------
 The test application binaries are generated in the folder <aocl-scalapack>/out/Testing/Release or
 <aocl-scalapack>/out/Testing/Debug based on the project settings. Run the tests from the command
 prompt as follows:
 
-#Example:
+# Example:
 $ cd aocl-scalapack/out/Testing/Release
 $ mpiexec -np 4 xdlu.exe
 
-#CONTACTS
+# CONTACTS
 ---------
 AOCL-ScaLAPACK is developed and maintained by AMD.
 For support, send an email to toolchainsupport@amd.com.
